@@ -79,3 +79,5 @@ FROM
   final
 ORDER BY nation_key ASC
 ```
+
+![View Models](img/models_as_views.png)
