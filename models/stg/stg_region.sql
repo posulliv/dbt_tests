@@ -1,16 +1,19 @@
 with source as (
 
-    select * from {{ source('tpch', 'nation') }}
+    select * from {{ ref('raw_region') }}
 
 ),
 
 renamed as (
+
     select
-        nationkey as nation_key,
-        name as name,
+    
         regionkey as region_key,
+        name as name,
         comment as comment
+
     from source
+
 )
 
 select * from renamed
